@@ -30,7 +30,7 @@ export default function PhotoCollage({ photos, side = 'left' }) {
             >
               <div style={{ aspectRatio: aspectRatios[i % aspectRatios.length] }}>
                 <img
-                  src={photo.src}
+                  src={photo.thumb || photo.src}
                   alt={photo.caption}
                   className="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg"
                   loading="lazy"

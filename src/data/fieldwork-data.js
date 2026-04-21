@@ -37,7 +37,11 @@ const rawPhotos = [
   { file: '34-AS事务所-索邦大学校区更新3.JPG', caption: 'AS事务所-索邦大学校区更新' },
 ]
 
-export const fieldworkPhotos = rawPhotos.map(p => ({
-  src: `${import.meta.env.BASE_URL}images/act1/fieldwork/${p.file}`,
-  caption: p.caption,
-}))
+export const fieldworkPhotos = rawPhotos.map(p => {
+  const thumbFile = p.file.replace(/\.png$/i, '.jpg')
+  return {
+    src: `${import.meta.env.BASE_URL}images/act1/fieldwork/${p.file}`,
+    thumb: `${import.meta.env.BASE_URL}images/act1/fieldwork/thumbs/${thumbFile}`,
+    caption: p.caption,
+  }
+})

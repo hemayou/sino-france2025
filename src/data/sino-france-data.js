@@ -48,10 +48,10 @@ export const comparisonThemes = [
       context: '巴黎：在一座历史文化名城中，如何增加和织补绿色',
       description: '截止2025年，巴黎已实施完成超过250条通学路/花园街道。通过环城小铁路环线（petite ceinture）改造为绿色生态廊道，将130所学校操场改造为绿色儿童探险乐园。',
       images: [
-        { src: `${import.meta.env.BASE_URL}images/sino-france/slide24_img042.png`, caption: '巴黎花园街道改造' },
+        { src: `${import.meta.env.BASE_URL}images/sino-france/slide24_img042.jpg`, caption: '巴黎花园街道改造' },
         { src: `${import.meta.env.BASE_URL}images/sino-france/slide26_img044.jpg`, caption: 'Rue Charles Baudelaire' },
         { src: `${import.meta.env.BASE_URL}images/sino-france/slide27_img048.jpg`, caption: '可以"坐"的街道' },
-        { src: `${import.meta.env.BASE_URL}images/sino-france/slide28_img049.png`, caption: '铁路绿道改造' },
+        { src: `${import.meta.env.BASE_URL}images/sino-france/slide28_img049.jpg`, caption: '铁路绿道改造' },
         { src: `${import.meta.env.BASE_URL}images/sino-france/slide33_img062.jpg`, caption: '勒内-杜蒙绿色步道' },
       ],
     },
@@ -80,7 +80,7 @@ export const comparisonThemes = [
       context: '巴黎：回归慢行的城市',
       description: '1995-2024年，自行车道从5km增至1203km。小轿车流量自2001年以来减少50%，小汽车拥车率从50%（1999）下降至31%（2022）。公共空间分配给汽车的比例从66%下降至50%。',
       images: [
-        { src: `${import.meta.env.BASE_URL}images/sino-france/slide38_img069.png`, caption: '巴黎办公转住宅十年趋势' },
+        { src: `${import.meta.env.BASE_URL}images/sino-france/slide38_img069.jpg`, caption: '巴黎办公转住宅十年趋势' },
         { src: `${import.meta.env.BASE_URL}images/sino-france/slide39_img072.png`, caption: '自行车道发展' },
         { src: `${import.meta.env.BASE_URL}images/sino-france/slide40_img077.jpg`, caption: '空间权益重新分配' },
         { src: `${import.meta.env.BASE_URL}images/sino-france/slide39_img075.jpg`, caption: '自行车机动车出行占比' },

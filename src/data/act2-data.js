@@ -13,7 +13,7 @@ export const adminSystem = {
   badge: 'gold',
   intro: '法国实行兼具中央集权与地方分权特征的单一制国家结构，空间规划权相对集中于国家体系。',
   images: [
-    { src: `${import.meta.env.BASE_URL}images/act2/admin/admin01.png`, caption: 'Regions and departments of Metropolitan France' },
+    { src: `${import.meta.env.BASE_URL}images/act2/admin/admin01.jpg`, caption: 'Regions and departments of Metropolitan France' },
     { src: `${import.meta.env.BASE_URL}images/act2/admin/admin02.png`, caption: 'Carte administrative de la France' },
     { src: `${import.meta.env.BASE_URL}images/act2/admin/admin03.webp`, caption: '法国行政层级的"千层饼"模式' },
   ],
@@ -38,13 +38,13 @@ export const parisRegion = {
   intro: '2023年常住人口1240万，占法国总人口18.2%，GDP达7830亿欧元，贡献法国全国GDP的30%。',
   images: [
     { src: `${import.meta.env.BASE_URL}images/act2/region/region01.png`, caption: '巴黎大区在欧盟的区位图' },
-    { src: `${import.meta.env.BASE_URL}images/act2/region/region02.png`, caption: '巴黎大区、大巴黎都市区与巴黎市区划图' },
+    { src: `${import.meta.env.BASE_URL}images/act2/region/region02.jpg`, caption: '巴黎大区、大巴黎都市区与巴黎市区划图' },
     { src: `${import.meta.env.BASE_URL}images/act2/region/region03.png`, caption: '巴黎吸引国际游客目的地及其规模（2023）' },
     { src: `${import.meta.env.BASE_URL}images/act2/region/region04.png`, caption: '巴黎主要商业消费中心分布图' },
-    { src: `${import.meta.env.BASE_URL}images/act2/region/region05.png`, caption: '巴黎2024年奥运会与残奥会设施及遗产' },
-    { src: `${import.meta.env.BASE_URL}images/act2/region/region06.png`, caption: '巴黎萨克雷大学校园' },
+    { src: `${import.meta.env.BASE_URL}images/act2/region/region05.jpg`, caption: '巴黎2024年奥运会与残奥会设施及遗产' },
+    { src: `${import.meta.env.BASE_URL}images/act2/region/region06.jpg`, caption: '巴黎萨克雷大学校园' },
     { src: `${import.meta.env.BASE_URL}images/act2/region/region07.png`, caption: '巴黎大区外国直接投资来源国及就业岗位' },
-    { src: `${import.meta.env.BASE_URL}images/act2/region/region08.png`, caption: '巴黎大区商务办公市场分布图' },
+    { src: `${import.meta.env.BASE_URL}images/act2/region/region08.jpg`, caption: '巴黎大区商务办公市场分布图' },
   ],
   levels: [
     {
@@ -73,7 +73,7 @@ export const climateEnv = {
     { src: `${import.meta.env.BASE_URL}images/act2/climate/rue-milton.jpg`, caption: 'Rue Milton, 9e arrondissement' },
     { src: `${import.meta.env.BASE_URL}images/act2/climate/rue-foncin.jpg`, caption: 'Rue Pierre Foncin, 20e' },
     { src: `${import.meta.env.BASE_URL}images/act2/climate/rue-oran.jpg`, caption: 'Rue d\'Oran, espace de stationnement' },
-    { src: `${import.meta.env.BASE_URL}images/act2/climate/petite-ceinture.png`, caption: 'Petite ceinture, jardin partagé' },
+    { src: `${import.meta.env.BASE_URL}images/act2/climate/petite-ceinture.jpg`, caption: 'Petite ceinture, jardin partagé' },
   ],
   levels: [
     {
@@ -161,8 +161,8 @@ export const socialHousing = {
   badge: 'question',
   intro: '法国社会住房体系以SRU法为法律基石，通过强制配额与混合社区策略构建住房保障网络。',
   images: [
-    { src: `${import.meta.env.BASE_URL}images/act2/housing/image113.png`, caption: '巴黎社会住房分布图' },
-    { src: `${import.meta.env.BASE_URL}images/act2/housing/image121.png`, caption: '巴黎社会住房年代分布图' },
+    { src: `${import.meta.env.BASE_URL}images/act2/housing/image113.jpg`, caption: '巴黎社会住房分布图' },
+    { src: `${import.meta.env.BASE_URL}images/act2/housing/image121.jpg`, caption: '巴黎社会住房年代分布图' },
     { src: `${import.meta.env.BASE_URL}images/act2/housing/image117.png`, caption: '低于巴黎廉租房最低收入标准的家庭分布图' },
     { src: `${import.meta.env.BASE_URL}images/act2/housing/image118.png`, caption: '社会住房中的独居老人比例' },
     { src: `${import.meta.env.BASE_URL}images/act2/housing/image122.jpeg`, caption: 'Reuilly兵营再造的社会住房' },
@@ -207,9 +207,9 @@ export const urbanRenewal = {
   images: [
     { src: `${import.meta.env.BASE_URL}images/act2/renewal/image43.jpeg`, caption: 'Pantin港口ZAC' },
     { src: `${import.meta.env.BASE_URL}images/act2/renewal/image52.jpeg`, caption: 'Clichy Batignolles 协议更新区' },
-    { src: `${import.meta.env.BASE_URL}images/act2/renewal/image61.png`, caption: '巴黎左岸（Rive Gauche）协议更新区（总平面图）' },
+    { src: `${import.meta.env.BASE_URL}images/act2/renewal/image61.jpg`, caption: '巴黎左岸（Rive Gauche）协议更新区（总平面图）' },
     { src: `${import.meta.env.BASE_URL}images/act2/renewal/image62.jpeg`, caption: '今日左岸' },
-    { src: `${import.meta.env.BASE_URL}images/act2/renewal/image75.png`, caption: 'Saint de Vincent医院更新' },
+    { src: `${import.meta.env.BASE_URL}images/act2/renewal/image75.jpg`, caption: 'Saint de Vincent医院更新' },
     { src: `${import.meta.env.BASE_URL}images/act2/renewal/image77.jpeg`, caption: '圣日尔曼市场更新' },
     { src: `${import.meta.env.BASE_URL}images/act2/renewal/image104.jpeg`, caption: '溪流花园小微空间更新' },
     { src: `${import.meta.env.BASE_URL}images/act2/renewal/image107.png`, caption: '铁路花园小微空间更新' },
