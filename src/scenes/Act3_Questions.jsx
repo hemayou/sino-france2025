@@ -328,13 +328,13 @@ export default function Act3_Questions() {
 
         {/* 横向滑动容器 - CSS scroll-snap */}
         <div className="relative">
-          {/* 左右箭头 */}
+          {/* 左右箭头：只在追问区域进入视口时显示 */}
           <button onClick={prevSlide} disabled={currentSlide === 0}
-            className="fixed left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/90 backdrop-blur shadow-lg flex items-center justify-center text-charcoal hover:text-gold hover:scale-110 transition-all disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100">
+            className={`fixed left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/90 backdrop-blur shadow-lg flex items-center justify-center text-charcoal hover:text-gold hover:scale-110 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 ${isInQuestionsView ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
             <ChevronLeft size={24} />
           </button>
           <button onClick={nextSlide} disabled={currentSlide === totalSlides - 1}
-            className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/90 backdrop-blur shadow-lg flex items-center justify-center text-charcoal hover:text-gold hover:scale-110 transition-all disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100">
+            className={`fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/90 backdrop-blur shadow-lg flex items-center justify-center text-charcoal hover:text-gold hover:scale-110 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 ${isInQuestionsView ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
             <ChevronRight size={24} />
           </button>
 

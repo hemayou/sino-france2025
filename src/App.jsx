@@ -2,7 +2,6 @@ import { useState, useEffect, useRef, createContext } from 'react'
 import './App.css'
 import Navigation from './components/Navigation'
 import ScrollProgress from './components/ScrollProgress'
-import ThemeToggle from './components/ThemeToggle'
 import FullscreenToggle from './components/FullscreenToggle'
 import Act1_Intro from './scenes/Act1_Intro'
 import Act2_Learning from './scenes/Act2_Learning'
@@ -24,17 +23,7 @@ const ACTS = [
 function App() {
   const [currentAct, setCurrentAct] = useState('act1')
   const [scrollProgress, setScrollProgress] = useState(0)
-  const [darkMode, setDarkMode] = useState(false)
   const containerRef = useRef(null)
-
-  useEffect(() => {
-    // 初始化主题
-    if (darkMode) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  }, [darkMode])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,11 +58,10 @@ function App() {
   }
 
   return (
-    <AppContext.Provider value={{ currentAct, scrollProgress, scrollToAct, acts: ACTS, darkMode, setDarkMode }}>
-      <div ref={containerRef} className={`app-container ${darkMode ? 'dark' : ''}`}>
+    <AppContext.Provider value={{ currentAct, scrollProgress, scrollToAct, acts: ACTS }}>
+      <div ref={containerRef} className="app-container">
         <Navigation />
         <ScrollProgress />
-        <ThemeToggle />
         <FullscreenToggle />
 
         <section id="act1">
