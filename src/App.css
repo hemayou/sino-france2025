@@ -1,0 +1,135 @@
+/* 全局应用布局 */
+.app-container {
+  position: relative;
+  width: 100%;
+}
+
+/* 幕标题统一样式 */
+.act-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 700;
+  color: var(--color-charcoal);
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+}
+
+.act-title-light {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+}
+
+.act-subtitle {
+  font-family: var(--font-en);
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 400;
+  color: var(--color-gold);
+  margin-top: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.act-description {
+  font-family: var(--font-sans);
+  font-size: clamp(1.125rem, 1.8vw, 1.5rem);
+  font-weight: 300;
+  color: var(--color-gray-500);
+  line-height: 1.8;
+  max-width: 50ch;
+}
+
+/* 章节卡片 */
+.chapter-card {
+  background: var(--color-white);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 
+    0 1px 2px rgba(0,0,0,0.04),
+    0 4px 8px rgba(0,0,0,0.04),
+    0 8px 16px rgba(0,0,0,0.04),
+    0 16px 32px rgba(0,0,0,0.06);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chapter-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0 2px 4px rgba(0,0,0,0.04),
+    0 8px 16px rgba(0,0,0,0.06),
+    0 16px 32px rgba(0,0,0,0.08),
+    0 32px 64px rgba(0,0,0,0.1);
+}
+
+/* 引用块 */
+.quote-block {
+  font-family: var(--font-art);
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  color: var(--color-charcoal);
+  border-left: 3px solid var(--color-gold);
+  padding-left: 2rem;
+  margin: 2.5rem 0;
+  line-height: 1.9;
+}
+
+/* 标签 */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.badge-gold {
+  background: linear-gradient(135deg, rgba(212,165,116,0.12), rgba(212,165,116,0.08));
+  color: var(--color-gold-dark);
+  border: 1px solid rgba(212,165,116,0.2);
+}
+
+.badge-eco {
+  background: linear-gradient(135deg, rgba(90,125,90,0.12), rgba(90,125,90,0.08));
+  color: var(--color-eco);
+  border: 1px solid rgba(90,125,90,0.2);
+}
+
+/* 图片容器 */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 
+    0 4px 6px rgba(0,0,0,0.05),
+    0 10px 20px rgba(0,0,0,0.08);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-container:hover img {
+  transform: scale(1.04);
+}
+
+/* 图注 */
+.image-caption {
+  font-size: 0.8rem;
+  color: var(--color-gray-500);
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+/* 过渡间距 */
+.act-transition {
+  height: 15vh;
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-gray-50) 50%, var(--color-white) 100%);
+}
