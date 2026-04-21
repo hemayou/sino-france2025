@@ -1,4 +1,5 @@
-import { useRef, useEffect, useState, useCallback } from 'react'
+import { useRef, useEffect, useState, useCallback, useContext } from 'react'
+import { AppContext } from '../App'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { act3Intro, act3Prologue, questions, act3Closing } from '../data/act3-data'
@@ -251,7 +252,8 @@ export default function Act3_Questions() {
   const questionsSectionRef = useRef(null)
   const [currentSlide, setCurrentSlide] = useState(0)
   const [lightbox, setLightbox] = useState({ isOpen: false, images: [], index: 0 })
-  const [isInQuestionsView, setIsInQuestionsView] = useState(false)
+  const { currentAct } = useContext(AppContext)
+  const isInAct3 = currentAct === 'act3'
   const totalSlides = questions.length
 
   const goToSlide = useCallback((index) => {
@@ -287,32 +289,16 @@ export default function Act3_Questions() {
     return () => container.removeEventListener('scroll', handleScroll)
   }, [currentSlide, totalSlides])
 
-  // 检测追问区域是否在视口中
-  useEffect(() => {
-    const questionsSection = questionsSectionRef.current
-    if (!questionsSection) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInQuestionsView(entry.isIntersecting)
-      },
-      { threshold: 0.3 }
-    )
-
-    observer.observe(questionsSection)
-    return () => observer.disconnect()
-  }, [])
-
-  // 键盘导航：只在追问区域可见时响应
+  // 键盘导航：只在 act3 区域响应
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (!isInQuestionsView) return
+      if (!isInAct3) return
       if (e.key === 'ArrowRight') nextSlide()
       if (e.key === 'ArrowLeft') prevSlide()
     }
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [currentSlide, isInQuestionsView])
+  }, [currentSlide, isInAct3])
 
   const openLightbox = (images, index) => setLightbox({ isOpen: true, images, index })
 
@@ -328,13 +314,13 @@ export default function Act3_Questions() {
 
         {/* 横向滑动容器 - CSS scroll-snap */}
         <div className="relative">
-          {/* 左右箭头：只在追问区域进入视口时显示 */}
+          {/* 左右箭头：只在 act3 区域显示，用 scale 避免 disabled 与 opacity 冲突 */}
           <button onClick={prevSlide} disabled={currentSlide === 0}
-            className={`fixed left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/90 backdrop-blur shadow-lg flex items-center justify-center text-charcoal hover:text-gold hover:scale-110 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 ${isInQuestionsView ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+            className={`fixed left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/90 backdrop-blur shadow-lg flex items-center justify-center text-charcoal hover:text-gold hover:scale-110 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 ${isInAct3 ? 'scale-100 opacity-100 pointer-events-auto' : 'scale-0 opacity-0 pointer-events-none'}`}>
             <ChevronLeft size={24} />
           </button>
           <button onClick={nextSlide} disabled={currentSlide === totalSlides - 1}
-            className={`fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/90 backdrop-blur shadow-lg flex items-center justify-center text-charcoal hover:text-gold hover:scale-110 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 ${isInQuestionsView ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+            className={`fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/90 backdrop-blur shadow-lg flex items-center justify-center text-charcoal hover:text-gold hover:scale-110 transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 ${isInAct3 ? 'scale-100 opacity-100 pointer-events-auto' : 'scale-0 opacity-0 pointer-events-none'}`}>
             <ChevronRight size={24} />
           </button>
 
