@@ -33,8 +33,8 @@ const rawPhotos = [
   { file: '30-夏邦杰事务所-法国主建筑师建筑制度-2.jpg', caption: '夏邦杰事务所-法国主建筑师制度' },
   { file: '31-夏邦杰事务所-法国主建筑师建筑制度-3.jpg', caption: '夏邦杰事务所-法国主建筑师制度' },
   { file: '32-AS事务所-索邦大学校区更新2.jpg', caption: 'AS事务所-索邦大学校区更新' },
-  { file: '33-巴黎市政府-雨水管理座谈4.jpg', caption: '巴黎市政府-雨水管理座谈' },
-  { file: '34-AS事务所-索邦大学校区更新3.jpg', caption: 'AS事务所-索邦大学校区更新' },
+  { file: '33-巴黎市政府-雨水管理座谈4.JPG', caption: '巴黎市政府-雨水管理座谈' },
+  { file: '34-AS事务所-索邦大学校区更新3.JPG', caption: 'AS事务所-索邦大学校区更新' },
 ]
 
 export const fieldworkPhotos = rawPhotos.map(p => ({
