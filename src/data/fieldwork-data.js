@@ -38,6 +38,6 @@ const rawPhotos = [
 ]
 
 export const fieldworkPhotos = rawPhotos.map(p => ({
-  src: `/images/act1/fieldwork/${p.file}`,
+  src: `${import.meta.env.BASE_URL}images/act1/fieldwork/${p.file}`,
   caption: p.caption,
 }))

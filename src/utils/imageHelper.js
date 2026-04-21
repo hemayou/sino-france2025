@@ -16,5 +16,5 @@ export function getFolderImages(folderPath) {
   const patterns = ['image1.jpeg', 'image2.jpeg', 'image3.jpeg', 'image4.jpeg', 'image5.jpeg',
                     'image1.png', 'image2.png', 'image3.png', 'image4.png', 'image5.png',
                     'image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg', 'image5.jpg']
-  return patterns.map(p => `/images/${folderPath}/${p}`)
+  return patterns.map(p => `${import.meta.env.BASE_URL}images/${folderPath}/${p}`)
 }

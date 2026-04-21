@@ -58,7 +58,7 @@ export default function Act1_Intro() {
         <div className="hero-bg absolute inset-0">
           {/* 巴黎全景背景图 */}
           <img
-            src="/images/paris-hero.jpg"
+            src={import.meta.env.BASE_URL + "images/paris-hero.jpg"}
             alt="Paris panorama"
             className="absolute inset-0 w-full h-full object-cover opacity-40"
           />
