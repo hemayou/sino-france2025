@@ -87,7 +87,7 @@ function ComparisonSlide({ theme, index }) {
             <div className="w-full md:w-3/5 h-[45vh] md:h-full relative">
               {theme.french.images[0] && (
                 <img src={theme.french.images[0].src} alt={theme.french.images[0].caption}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover" loading="lazy" loading="lazy"
                   onError={(e) => { e.target.style.display = 'none' }} />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-charcoal/30" />
@@ -110,7 +110,7 @@ function ComparisonSlide({ theme, index }) {
                   })()}`}>
                     {theme.french.images.slice(1).map((img, i) => (
                       <div key={i} className="aspect-[4/3] rounded-lg overflow-hidden">
-                        <img src={img.src} alt={img.caption} className="w-full h-full object-cover"
+                        <img src={img.src} alt={img.caption} className="w-full h-full object-cover" loading="lazy" loading="lazy"
                           onError={(e) => { e.target.style.display = 'none' }} />
                       </div>
                     ))}
@@ -128,7 +128,7 @@ function ComparisonSlide({ theme, index }) {
             <div className="w-full md:w-3/5 h-[45vh] md:h-full relative">
               {theme.chinese.images[0] && (
                 <img src={theme.chinese.images[0].src} alt={theme.chinese.images[0].caption}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover" loading="lazy" loading="lazy"
                   onError={(e) => { e.target.style.display = 'none' }} />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />

@@ -189,14 +189,14 @@ export default function Act4_Epilogue() {
             {/* 签名与二维码 */}
             <div className="flex items-end justify-center gap-10 md:gap-16">
               <div className="flex flex-col items-center gap-2">
-                <img src={import.meta.env.BASE_URL + "images/signature.svg"} alt="签名" className="h-14 md:h-16 object-contain" />
+                <img src={import.meta.env.BASE_URL + "images/signature.svg"} alt="签名" loading="lazy" className="h-14 md:h-16 object-contain" />
               </div>
               <div className="flex flex-col items-center gap-2">
-                <img src={import.meta.env.BASE_URL + "images/wechat QR.JPG"} alt="微信二维码" className="w-24 h-24 md:w-28 md:h-28 rounded-lg shadow-sm" />
+                <img src={import.meta.env.BASE_URL + "images/wechat QR.JPG"} alt="微信二维码" loading="lazy" className="w-24 h-24 md:w-28 md:h-28 rounded-lg shadow-sm" />
                 <span className="text-white/40 text-xs">微信</span>
               </div>
               <div className="flex flex-col items-center gap-2">
-                <img src={import.meta.env.BASE_URL + "images/Website QR.png"} alt="网站二维码" className="w-24 h-24 md:w-28 md:h-28 rounded-lg shadow-sm" />
+                <img src={import.meta.env.BASE_URL + "images/Website QR.png"} alt="网站二维码" loading="lazy" className="w-24 h-24 md:w-28 md:h-28 rounded-lg shadow-sm" />
                 <span className="text-white/40 text-xs">网站</span>
               </div>
             </div>

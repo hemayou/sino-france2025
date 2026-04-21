@@ -181,7 +181,7 @@ export const questions = [
       { src: `${import.meta.env.BASE_URL}images/act3/q5-temporary/image196.jpeg`, caption: '"大邻居"市集场景' },
       { src: `${import.meta.env.BASE_URL}images/act3/q5-temporary/image197.jpeg`, caption: '"大邻居"游乐场景' },
       { src: `${import.meta.env.BASE_URL}images/act3/q5-temporary/image198.jpeg`, caption: '铁路农场' },
-      { src: `${import.meta.env.BASE_URL}images/act3/q5-temporary/image199.GIF`, caption: '"未完成"的空间' },
+      { src: `${import.meta.env.BASE_URL}images/act3/q5-temporary/image199.jpg`, caption: '"未完成"的空间' },
     ],
   },
   {

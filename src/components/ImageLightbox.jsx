@@ -62,7 +62,7 @@ export default function ImageLightbox({
         <img
           src={image.src}
           alt={image.caption || ''}
-          className="max-w-full max-h-[75vh] object-contain"
+          className="max-w-full max-h-[75vh] object-contain" loading="lazy"
         />
         {image.caption && (
           <p className="text-white/80 text-sm mt-4 text-center max-w-2xl px-4">

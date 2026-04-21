@@ -66,7 +66,7 @@ function ImageGallery({ images, onImageClick }) {
           <button key={i} onClick={() => onImageClick(images, i)}
             className="relative flex-1 aspect-[4/3] max-w-[280px] overflow-hidden rounded-xl group bg-gray-100 shadow-md">
             <img src={img.src} alt={img.caption || ''}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy"
               onError={(e) => { e.target.parentElement.style.display = 'none' }} />
             {img.caption && (
               <div className="absolute bottom-0 left-0 right-0 bg-black/50 px-3 py-2 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity">
